@@ -1,0 +1,466 @@
+/* semua elemen html dalam 1 font */
+* {
+    font-family: "Montserrat" ;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* #dummy {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    position: static;
+}
+
+#dummy img {
+    position : relative;
+    right : 0;
+} */
+
+#landing, #about, #service, #contact {
+    margin-bottom: 16px;
+}
+
+main{
+    padding: 64px 128px;
+}
+/* tebal tipis font */
+/* ukuran font */
+/* mengubah gaya font */
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    margin: 0px 0px 16px 0px;
+    /* font-style: italic; */
+}
+
+/* Menghilangkan garis bawah pada anchor */
+/* mengubah warna */
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+p {
+    color: #979797;
+    margin: 0px 0px 16px 0px;
+    font-size: 24px;
+}
+
+img, iframe {
+    width: 100%;
+}
+
+/* Untuk memasukkan gambar dari internet ke background */
+/* Untuk memasukkan gambar dari komputer kita ke background */
+/* untuk mengatur ukuran background */
+/* section {
+    background-image: url(https://185.224.82.193/img/117641l.jpg);
+    background-image: url('Be ngepet.PNG');
+    background-size: cover;
+} */
+
+/* background color : untuk memberi warna pada background */
+/* jika pke class awal pke ., jika pake id awal pke # */
+/* padding untuk jarak konten ke border. Urutan kalo ada 2 :
+atas bawah, kiri kanan. Kalo ada 4 : atas, kanan, bawah, kiri/
+searah jarum jam */
+.btn {
+    background-color: #ffc108;
+    color: white;
+    padding: 8px 16px;
+}
+
+/* margin digunakan untuk memberi jarak antar element */
+/* border untuk membuat garis, solid merupakan tipe garis */
+.btn-alt {
+    background-color: white;
+    color: black;
+    margin-right: 16px;
+    border: 2px solid #ffc108;
+    padding: 6px 16px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 128px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 5;
+}
+
+/* animation */
+header h1 {
+    margin: 0px;
+    /* animation: flash 1s infinite; */
+    animation: bounceIn 1s ;
+}
+
+/* keyframe proses animation */
+/* @keyframes flash {
+    from {
+        filter: opacity(0);
+    }
+    to {
+        filter: opacity(1);
+    }
+} */
+
+@keyframes bounceIn {
+    0% {
+        filter: opacity(0);
+        transform: translateY(-20px);
+    }
+    35% {
+        filter: opacity(0.25);
+        transform: translateY(0px);
+    }
+    70% {
+        filter: opacity(0.5);
+        transform: translateY(-10px);
+    }
+    100% {
+        filter: opacity(1);
+        transform: translateY(0px);
+    }
+}
+
+
+.service {
+    padding: 0px 16px;
+}
+
+nav a:hover {
+    color: #ffc108;
+}
+
+#landing{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+#landing h1 {
+    animation: kirikanan 1s ;
+}
+
+@keyframes kirikanan {
+    0%   {
+        filter: opacity(0);
+        transform: translateX(-10px) ;
+    }
+	25%  {
+        filter: opacity(0.25);
+        transform: translateX(-5px) ;
+    }
+	50%  {
+        filter: opacity(0.50);
+        transform: translateX(0px) ;
+    }
+	75%  {
+        filter: opacity(0.75);
+        transform: translateX(5px) ;
+    }
+	100% {
+        filter: opacity(1);
+        transform: translateX(0px) ;
+    }
+}
+
+#landing p {
+    margin-bottom: 32px;
+}
+
+#landing > div {
+    width: 50%;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+#about>div {
+    width: 50%;
+}
+
+#about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin-top: 72px;
+}
+
+.about-stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-stats-item div {
+    width: 50px;
+    height: 10px;
+    background-color: #ffc108;
+    margin-bottom: 16px;
+}
+
+
+.service-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-header h1 {
+    position: relative;
+}
+
+.service-header h1::before{
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url("images/accent1.svg");
+    position: absolute;
+    left : -20px;
+    top: -10px;
+    z-index: -1;
+}
+
+.service-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 128px;
+    margin-top: 72px;
+}
+
+.service-detail-item {
+    box-shadow: 2px 4px 4px #d1d1d1;
+}
+
+/* Transform */
+.service-detail-item:hover {
+    transform: scale(1.10);
+    /* transform: rotate(90deg); */
+    /* transform: skewX(30deg); */
+    /* transform: matrix(1,2,-1,1,5,4); */
+}
+
+/* filter */
+.service-detail-item img {
+    width: 100%;
+    /* filter: grayscale(1); */
+    /* filter: brightness(2); */
+}
+
+.service-detail-item h2 {
+    padding: 0px 16px;
+}
+
+.service-detail-item p{
+    font-size: 16px;
+    padding: 0px 16px;
+}
+
+#contact h1 {
+    position: relative;
+}
+
+#contact > h1::before{
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url("images/accent2.svg");
+    position: absolute;
+    left : -20px;
+    top: -10px;
+    z-index: -1;
+}
+
+.contact-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+    column-gap: 128px;
+}
+
+form, .contact-location {
+    width : 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #ffc108;
+    padding: 64px 32px;
+}
+
+form h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    margin-top: 32px;
+    grid-template-areas: 
+    "name subject"
+    "email phone"
+    "message message";
+}
+
+#input-name {
+    grid-area: name;
+}
+
+#input-subject {
+    grid-area: subject;
+}
+
+#input-email {
+    grid-area: email;
+}
+
+#input-phone {
+    grid-area: phone;
+}
+
+#input-message {
+    grid-area: message;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.input-group label {
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid #ffc108;
+}
+
+form button {
+    border : none;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+.contact-location iframe {
+    width: 550px;
+    height: 450px;
+}
+
+footer{
+    padding: 64px 128px;
+    background-color: #ffc108;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+    width: 50%;
+}
+
+.social-icon {
+    display: flex;
+    column-gap: 15px;
+}
+
+@media only screen and (max-width: 1212px){
+    .service-detail {
+        column-gap: 24px;
+    }
+    .contact-detail {
+        column-gap: 24px;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+     #header, footer{
+        padding: 16px 32px;
+     }
+     main {
+        padding: 64px 32px;
+     }
+     #landing {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+     }
+     #landing > div {
+        width: 100%;
+     }
+     #about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #about > div {
+        width: 100%;
+    }
+    .service-detail {
+        column-gap: 16px;
+    }
+    .contact-detail {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 64px;
+    }
+
+    .contact-location {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form, .contact-location {
+        width: 100%;
+    }
+}
+/* desdcendant combinator */
+/* .section-satu p {
+    color: #ffc108;
+} */
+
+/* child combinator */
+/* nav>a {
+    color: #ffc108;
+} */
